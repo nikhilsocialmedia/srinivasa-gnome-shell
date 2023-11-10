@@ -1,0 +1,1284 @@
+/*BACKGROUND: #e0c1a3; TEXT: #885200
+
+PRIMARY COLOR: #885200; TEXT: #ffeedf
+
+SECONDARY COLOR: #ffeedf; TEXT: #885200*/
+
+/*___________________________________________________________________________________________________________________p a n e l*/
+
+#panel {
+	background-color: transparent;
+	height: 38px;
+	font-size: 16px;
+	box-shadow: none;
+}
+.panel-button,
+.panel-button .clock, 	/* Date & clock */
+.clock-display StIcon { /* DND / new messages icon */
+	color: #885200;
+	border-radius: 24px;
+	border: 6px solid transparent;
+	background-color: #ffeedf;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);	/* do not change*/
+}
+.panel-button:hover,
+.panel-button:hover .clock, 
+.panel-button:active,
+.panel-button:active .clock {
+	border-radius: 8px;
+}
+.ripple-box {/* Activities Ripple (Settings - Multitasking - Hot Corner) */
+	background-color: #f6e1b780;
+	box-shadow: 0 0 2px 2px #f6e1b780;
+}
+.clock-display { /*do not change pannel clock*/
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+.clock-display StIcon { /* additional panel background for DND / new messages icon */
+	padding: 6px;
+	margin: 0;
+}
+
+
+/*_________________________________________________________________________________________________Q u i c k - s e t t i n g s*/
+
+/*quick settings and right-click BACKGROUND*/
+.popup-menu-content,
+.candidate-popup-content {
+	color: #885200;
+	background: #ffeedf; 
+	padding: 10px;
+	border-radius: 28px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+.popup-menu-item, /* menu items */
+.app-menu { /* right-click (and panel) app menu */
+	margin: 3px 0;
+	border-radius: 24px;
+	transition-duration: 0.1s;
+}
+.popup-menu-item:focus,
+.popup-menu-item:hover,
+.popup-menu-item:checked {
+	background-color: #885200 !important;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
+	color: #ffeedf;
+}
+.popup-menu-item:active {
+	border-radius: 6px;
+	color: #ffeedf;
+}
+
+
+/* screenshot / settings / lock / power options*/
+.icon-button {
+	background-color: #885200;
+	color: #ffeedf;
+	border-radius: 24px;
+	transition-duration: 0.05s;
+}
+.icon-button:hover {
+	border-radius: 6px;
+	transition-duration: 0.05s;
+}
+
+
+/* brightness & volume Sliders in quick settings */
+.slider,
+.level {
+	height: 15px;
+	-barlevel-height: 16px;
+	-barlevel-background-color: #e0c1a3;
+	box-shadow: inset 0 0 0 1px transparent;
+	/* fill */
+	-barlevel-active-background-color: #885200;
+	/* overfill */
+	-barlevel-overdrive-color: #c01c28;
+	-barlevel-overdrive-separator-width:0px;
+	-slider-handle-radius: 0px;
+  	-slider-handle-border-width: 0px;
+  	-slider-handle-border-color: #ffeedf;
+  	color: #ffeedf;
+}
+.quick-slider .icon-button {/* quick slider icon */
+	background-color: #885200;
+	padding: 6px;
+	border-radius: 24px;
+}
+.quick-slider .icon-button:hover {
+	border-radius: 6px;
+}
+
+
+/* Buttons or quick setting tiles */
+.button {
+	border: 2px solid #885200;
+	color: #885200;
+	background-color: transparent;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.button:hover,
+.button:active {
+	border-radius: 8px;
+}
+
+
+/* Quick Settings */
+.quick-settings {
+	padding: 18px;
+}
+.quick-menu-toggle .quick-toggle {
+	color: #885200;/* quick tiles off*/
+	border-radius: 24px;
+}
+.quick-toggle .quick-toggle-label {/* toggle name */
+	font-weight: bold;
+}
+/* adjust borders if quick toggle has expandable menu button (quick-toggle-arrow)[44+] */
+.quick-menu-toggle .quick-toggle:ltr { border-radius: 15px 0 0 15px; }
+.quick-menu-toggle .quick-toggle:rtl { border-radius: 0 15px 15px 0; }
+/* if quick toggle has no expandable menu button (quick-toggle-arrow)[44+] */
+.quick-menu-toggle .quick-toggle:last-child {
+	border-radius: 15px;
+}
+/* adjust borders in expandable menu button */
+.quick-menu-toggle .quick-toggle-arrow:ltr {
+	border-radius: 0 0px 0px 0;
+	border-left-width: 2px;
+}
+.quick-menu-toggle .quick-toggle-arrow:rtl {
+	border-radius: 15px 0 0 15px;
+	border-right-width: 2px;
+}
+.quick-toggle:checked,
+.quick-menu-toggle .quick-toggle:checked,
+.quick-menu-toggle .quick-toggle-arrow:checked {
+	color: #ffeedf;
+	background-color: #885200;
+	border-color: transparent;
+}
+.quick-toggle:checked:hover,
+.quick-menu-toggle .quick-toggle:checked:hover,
+.quick-menu-toggle .quick-toggle-arrow:checked:hover,
+.quick-toggle:hover,
+.quick-menu-toggle .quick-toggle:hover,
+.quick-menu-toggle .quick-toggle-arrow:hover{
+	border-radius: 6px;
+	transition-duration: 0.1s;
+}
+
+
+/* expanded menu */
+.quick-toggle-menu {
+	background-color: #ffeedf !important; 
+	color: #885200 !important;
+	border-radius: 28px;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  	margin: 12px auto;
+}
+.quick-toggle-menu .header .icon {/* header icon in expanded menu */
+	background-color: #885200;
+	color: #ffeedf;
+	border-radius: 24px;
+	icon-size: 1.4em;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+
+/*_________________________________________________________________________________________N o t i f i c a t i o n - p a n e l*/
+
+/* Messages */
+.message-list {
+	border: none; /* remove border between messages and calendar section */ 
+	padding: 0;
+}
+.message-list-placeholder {/* "No Notifications" text */
+	color: #885200;
+	font-weight: 700;
+}
+.message {/* icon for message if no dedicated icon*/
+	color: #885200;
+	border-radius: 18px;
+}
+.notification-banner {/* Message popup banner style */
+	background-color: #ffeedf;
+	color: #885200;
+	border: 2px solid #885200;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+}
+.message-list .message, .popup-menu-content .message {/* messages in notification menus */
+	border:2px solid #885200;
+	background-color: transparent;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+	transition-duration: 100ms;
+}
+.message-list .message:hover {
+	background-color: #e0c1a3;
+	border-radius: 6px;
+	transition-duration: 100ms;
+}
+.message-list .message:focus {
+	background-color: rgba(246, 225, 183, 0.5);
+	box-shadow: inset 0 0 0 2px rgba(153, 136, 102, 1) !important;
+}
+.message .message-body,/* text / header in message */
+.message-title {
+	color: #885200;
+}
+.message .message-secondary-bin > .event-time {/* message time stamp */
+	color: #885200;
+}
+.message-media-control:insensitive { color: rgba(43, 31, 7, 0.38); }
+.message-close-button {/* close button */
+	border-radius: 24px;
+	color: #ffeedf;
+	background-color: #885200;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+	transition-duration: 100ms;
+}
+.message-close-button:hover {
+	border-radius: 6px;
+}
+.message-close-button:active {
+	color: rgba(43, 31, 7, 0.6);
+}
+.message-media-control {/* Media Controls */
+	border-radius: 24px;
+	padding: 0 14px;
+	margin: 20px 2px;
+	color: #885200;
+	transition-duration: 100ms;
+}
+.message-media-control:hover {
+	background-color: #885200;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+	color: #ffeedf;
+}
+.media-message-cover-icon.fallback {/* when there is no artwork */
+	color: #ffeedf;
+	background-color: #885200;
+	border-radius: 12px;
+	icon-size: 1.6em !important;
+	padding: 0.79em;
+}
+.media-message-cover-icon {/* album art */
+	icon-size: 3.2em !important;
+	border-radius: 12px;
+}
+
+
+/*calendar area*/
+.datemenu-today-button {/* today header button (1) */
+	color: #ffeedf;
+	padding-left: 40px;
+	background-color: #885200;
+	border-radius: 18px;
+}
+.day-label {/* weekday label */
+	font-weight: 600;
+}
+.date-label {/* date label */
+	font-weight: 700;
+}
+
+
+/* Calendar (2) */
+.calendar {
+	border: 2px solid #885200;
+	background-color: transparent;
+	color: #885200;
+	border-radius: 30px;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
+	padding: 5px;
+}
+.calendar-month-label {/* month header in calender*/
+	color: #885200;
+}
+.calendar-day-base,
+.calendar-month-header .pager-button {/* day buttons, prev/next month button */
+	color: #885200;
+	border-radius: 24px;
+	transition-duration: 100ms;
+}
+.calendar-day-base:hover,
+.calendar-day-base:selected:hover,
+.calendar .calendar-month-header .pager-button:hover {
+	color: #ffeedf;
+	border-radius: 24px;
+	background-color: #885200;
+}
+.calendar-day-base:focus,
+.calendar .calendar-month-header .pager-button:focus {
+	color: #ffeedf;
+	border-radius: 24px;
+	border-color: transparent;
+	background-color: #885200;
+}
+.calendar-day-base:selected {
+	color: #ffeedf;
+	border-radius: 24px;
+	border-color: transparent;
+	background-color: #885200;
+}
+.calendar-today,/* today button */
+.calendar-today:selected {
+	background-color: #885200;
+	color: #ffeedf !important;
+}
+.calendar-today:hover,
+.calendar-today:selected:hover,
+.calendar-today:focus,
+.calendar-today:selected:focus {
+	color: #ffeedf;
+	border-radius: 6px;
+	border-color: transparent;
+	background-color: #885200;
+} 
+.calendar .calendar-day-with-events {/* if day has event */
+	background-image: url("calendar-event.svg");
+	background-size: contain;
+	font-weight: 700;
+}
+.calendar .calendar-today.calendar-day-with-events {
+	background-image: url("calendar-event-today.svg");
+	background-size: contain;
+}
+.calendar .calendar-nonwork-day {/* weekend day button */
+	color: #885200;
+	font-weight: bolder;
+}
+.calendar .calendar-nonwork-day:hover {
+	color: #ffeedf;
+	border-radius: 6px;
+	background-color: #885200;
+}
+.calendar .calendar-other-month-day {/* other month day button */
+	color: #885200;
+	font-weight: bolder;
+}
+.calendar .calendar-other-month-day:hover {
+	color: #ffeedf;
+	border-radius: 6px;
+	background-color: #885200;
+}
+.calendar .calendar-other-month-day.calendar-day-with-events {
+	background-image: url("calendar-event-disabled.svg");
+	background-size: contain;
+}
+.calendar .calendar-week-number {
+	background-color: #1fff06;
+	color: #2b1f0799;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+	border-radius: 7px;
+}
+
+
+/* Events / World clocks / weather section*/
+.events-button,
+.world-clocks-button,
+.weather-button {
+	border: 2px solid #885200;
+	background-color: transparent;
+	color: #885200;
+	border-radius: 24px;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.events-button:hover,
+.world-clocks-button:hover,
+.weather-button:hover {
+	border-radius: 6px;
+}
+.weather-button .weather-header,/* header */
+.events-button .events-title,
+.world-clocks-button .world-clocks-header {
+	color: #885200
+}
+.events-button .events-list {/* Events section */
+	color: #885200;
+}
+.events-button .event-time {
+	color: #885200;
+}
+.world-clocks-button .world-clocks-time {/* World clocks section */
+	color: #885200;
+}
+.world-clocks-button .world-clocks-city,
+.world-clocks-button .world-clocks-timezone {
+	color: #885200;
+}
+.weather-button .weather-forecast-time {/* Weather section */
+	color: #885200;
+}
+
+
+/* Toggles */
+.toggle-switch {
+	background-image: url("./toggle-off.svg");
+	border: 2px solid #885200;
+	border-radius: 24px;
+}
+.toggle-switch:checked {
+	background-image: url("./toggle-on.svg");
+	background-color: #885200;
+}
+.dnd-button {/* Do Not Distrub toggle */
+	width: 48px;
+	border-color: transparent;
+	border-radius: 24px;
+}
+.dnd-button .toggle-switch {
+	background-color: transparent;
+}
+.dnd-button .toggle-switch:checked {
+	background-color: transparent;
+}
+.dnd-button:focus {
+	border-color: transparent;
+}
+
+
+/* clear button */
+.message-list-clear-button {
+	padding: 3px 15px;
+	border: 2px solid #885200;
+	border-radius: 24px;
+}
+
+/*____________________________________________________________________________________________________________________d o c k*/
+
+/* Dock */
+#dash .dash-background {
+	background-color: #ffeedf;
+}
+.show-apps .overview-icon {/* Show App's icon  in dock*/
+	color: #885200;
+}
+#dash .app-well-app:hover .overview-icon,/* app icon hover in dock */
+#dash .app-well-app:focus .overview-icon,
+#dash .app-well-app:selected .overview-icon,
+#dash .show-apps:hover .overview-icon,
+#dash .show-apps:focus .overview-icon {
+	background-color: #e0c1a3;
+}
+.dash-label {/* popup label when hovering the app in dash */
+	background-color: #ffeedf;
+	border: 1px solid transparent;
+	color: #885200;
+	border-radius: 24px;
+}
+.app-well-app-running-dot {/* pill below if app is running */
+	width: 10px;
+	height: 5px;
+	border-radius: 5px;
+	background: #885200;
+	transition-duration: 100ms;
+}
+.dash-separator {/* pinned apps | running apps separator*/
+	box-shadow: 0 0 0 0.25px #885200;
+}
+/* ubuntu fix*/
+#dashtodockContainer #dash .app-well-app:hover .overview-icon,
+#dashtodockContainer #dash .app-well-app:focus .overview-icon,
+#dashtodockContainer #dash .app-well-app:selected .overview-icon,
+#dashtodockContainer #dash .show-apps:hover .overview-icon,
+#dashtodockContainer #dash .show-apps:focus .overview-icon,
+#dashtodockContainer .show-apps:selected .overview-icon,
+#dashtodockContainer .show-apps:selected:hover .overview-icon,
+#dashtodockContainer .show-apps:active .overview-icon,
+#dashtodockContainer .show-apps:checked .overview-icon,
+#dashtodockContainer .app-well-app.focused .overview-icon {/*app icon hover dock 2*/
+	background-color: #e0c1a3;
+	border-radius: 20px;
+}
+#dashtodockContainer .app-well-app.focused .overview-icon,
+.show-apps:selected .overview-icon,/* all apps icon selected overview icon*/
+.show-apps:selected:hover .overview-icon,/* focused app in dock*/
+.show-apps:active .overview-icon,
+.show-apps:checked .overview-icon {
+	background-color: #e0c1a3;
+	border-radius: circle;
+	box-shadow: inset 0 0 0px 2px #885200;
+}
+
+
+/*___________________________________________________________________________________________________________d a s h b o a r d */
+
+.app-well-app .overview-icon,/*app icon names */
+.app-well-app.app-folder .overview-icon,
+.grid-search-result .overview-icon,
+.app-folder.grid-search-result .overview-icon {
+	box-shadow: inset 0 0 0 0px rgba(255, 255, 255, 0); /* fix default dash focused box-shadow*/
+	transition-duration: 100ms;
+	border-radius: 24px;
+	color: #885200;
+}
+
+
+/* folders */
+.app-well-app.app-folder .overview-icon {
+	background-color: #48ff00f2;
+}
+.app-well-app:hover .overview-icon,
+.app-well-app:focus .overview-icon,/*dashboard app hover*/
+.app-well-app:selected .overview-icon,
+.app-well-app.app-folder .overview-icon,
+.show-apps:hover .overview-icon,
+.show-apps:focus .overview-icon {
+	border: 1px solid transparent;
+	box-shadow: inset 0 0 0 1px transparent;
+	background-color: #ffeedf;
+}
+.app-well-app:drop .overview-icon,/* effect when creating new folder */
+.grid-search-result:drop .overview-icon,
+.app-well-app.app-folder:drop .overview-icon,
+.app-folder.grid-search-result:drop .overview-icon {
+	border: 2px solid #885200;
+	background-color: #ffeedf;
+}
+.app-folder-dialog {/* Collapsed folders */
+	border-radius: 32px;
+	background-color: #e0c1a3;
+	border: 1px solid transparent;
+	padding: 0; /* because of icon grid */
+	box-shadow: inset 0 0 0 1px transparent;
+}
+.app-folder-dialog .folder-name-container .folder-name-label {/* folder title */
+	padding: 5px 7px;
+	color: rgba(43, 31, 7, 0.87);
+	font-weight: 700;
+	transition-duration: 100ms;
+}
+.app-folder-dialog .folder-name-container .folder-name-entry {/* folder title when editing */
+	font-weight: 700;
+	border: none;
+	box-shadow: inset 0 0 0 1px #0000001a;
+	background-color: #f0e9dce6;
+	selection-background-color: #ffeedf;
+	selected-color: rgba(43, 31, 7, 0.87);
+}
+.app-folder-dialog .folder-name-container .edit-folder-button {/* edit folder name button */
+	border-radius: 12px;
+	background-color: rgba(240, 233, 220, 0.9);
+	color: rgba(43, 31, 7, 0.87);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.app-folder-dialog .folder-name-container .edit-folder-button:hover {
+	background-color: rgba(231, 222, 204, 0.95);
+}
+.app-folder-dialog .folder-name-container .edit-folder-button:focus {
+	box-shadow: inset 0 0 0 2px rgba(153, 136, 102, 1) !important;
+}
+.page-indicator .page-indicator-icon {
+	background-color: rgba(43, 31, 7, 0.6);
+}
+.page-navigation-arrow {/* Page arrow */
+	border-radius: 99px;
+	transition-duration: 100ms;
+}
+.page-navigation-arrow > StIcon {
+	margin: 0;
+	color: rgba(43, 31, 7, 0.87);
+}
+.page-navigation-arrow:hover {
+	background-color: rgba(240, 233, 220, 0.9);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.page-navigation-arrow:hover > StIcon {
+	color: rgba(43, 31, 7, 0.87);
+	background-color: rgba(0, 0, 0, 0);
+}
+.page-navigation-arrow:active {
+	background-color: rgba(231, 222, 204, 0.95);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+/* left and right hints on edges of the screen when dragging app icon */
+.page-navigation-hint.next:ltr,
+.page-navigation-hint.previous:rtl {
+	background-gradient-start: rgba(99, 67, 2, 0.05);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.page-navigation-hint.previous:ltr,
+.page-navigation-hint.next:rtl {
+	background-gradient-end: rgba(99, 67, 2, 0.05);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+
+/*__________________________________________________________________________________________________________________s e a r c h*/
+
+/* search bar in dashboard*/
+StEntry {
+	border-radius: 24px;
+	padding: 8px;
+	transition-duration: 100ms;
+	border: 1px solid transparent;
+	background-color: #ffeedf;
+	color: #885200;
+	selection-background-color: #ffeedf;
+	selected-color: #885200;
+}
+StEntry StLabel {/* "type to search" is called stentry*/
+	color: #885200;
+}
+StEntry:hover,
+StEntry:focus,
+StEntry:active {
+	border: 1px solid transparent;
+	background-color: #ffeedf;
+	box-shadow: none;
+}
+.search-statustext {/* "no results" text */
+	color: #885200;
+	font-weight: 700;
+}
+.search-section-content {	/* founded results background */
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+	border-radius: circle;
+	border: none;
+	background-color: #ffeedf;
+	color: #885200;
+}
+/* provider section label */
+.search-provider-icon .list-search-provider-content .list-search-provider-details {
+	width: 120px;
+	color: #885200;
+}
+/* search result listitem -> item title (with leading icon) */
+.list-search-result .list-search-result-title {
+	color: #885200;
+}
+/* search result listitem -> item description */
+.list-search-result .list-search-result-description {
+	color: #885200;
+}
+.list-search-result:hover,
+.list-search-result:active,/*search results hover*/
+.search-provider-icon:active {
+	border-radius: 18px;
+	background-color: #e0c1a3;
+	color: #885200;
+}
+
+
+/*_____________________________________________________________________________________________________s c r e e n s h o t u i */
+
+/* main screenshot panel section */
+.screenshot-ui-panel {
+	color: #2b1f07de;
+	background-color: #ffeedf;
+	border: 1px solid #0000001a;
+	border-radius: 22px;
+	box-shadow: 0 0 15px 0 #00000012;
+}
+.screenshot-ui-show-pointer-button, /* show pointer */
+.screenshot-ui-type-button { /* Selection / Screen / Window */
+	color: rgba(43, 31, 7, 0.87);
+	border-radius: 15px;
+	transition-duration: 100ms;
+}
+.screenshot-ui-show-pointer-button:hover,
+.screenshot-ui-type-button:hover,
+.screenshot-ui-show-pointer-button:focus,
+.screenshot-ui-type-button:focus {
+	background: rgba(240, 233, 220, 0.9);
+	color: rgba(43, 31, 7, 0.87);
+}
+.screenshot-ui-show-pointer-button:hover,
+.screenshot-ui-type-button:hover,
+.screenshot-ui-show-pointer-button:active,
+.screenshot-ui-type-button:active {
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.screenshot-ui-show-pointer-button:checked,
+.screenshot-ui-type-button:checked,
+.screenshot-ui-show-pointer-button:checked:hover,
+.screenshot-ui-type-button:checked:hover,
+.screenshot-ui-show-pointer-button:checked:focus,
+.screenshot-ui-type-button:checked:focus {
+	background-color: #e7deccf2;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+	color: #2b1f07de;
+}
+.screenshot-ui-show-pointer-button:insensitive,
+.screenshot-ui-type-button:insensitive {
+	color: #2b1f0761;
+}
+.screenshot-ui-window-selector {/* window selection backround */
+	background-color: #f4eee2cc;
+}
+.screenshot-ui-window-selector-window:hover .screenshot-ui-window-selector-window-border {
+	border-color: rgba(215, 186, 127, 1);/* window border when selecting */
+}
+.screenshot-ui-window-selector-window:checked .screenshot-ui-window-selector-window-border {
+	border-color: rgba(215, 186, 127, 1);
+	background-color: rgba(246, 225, 183, 0.5);
+}
+.screenshot-ui-window-selector-window:checked .screenshot-ui-window-selector-check {
+	color: rgba(43, 31, 7, 0.87);/* check icon when selected window */
+	background-color: rgba(215, 186, 127, 1);
+}
+.screenshot-ui-capture-button {/* 24px around capture button */
+	width: 36px;
+	height: 36px;
+	border-radius: 99px;
+	border: 4px rgba(153, 136, 102, 1);
+	padding: 4px;
+}
+.screenshot-ui-capture-button .screenshot-ui-capture-button-24px {/* capture button */
+	background-color: rgba(153, 136, 102, 1);
+	transition-duration: 100ms;
+	border-radius: 99px;
+}
+.screenshot-ui-capture-button .screenshot-ui-capture-button-24px:hover,
+.screenshot-ui-capture-button .screenshot-ui-capture-button-24px:focus {
+	background-color: rgba(138, 122, 92, 1);
+}
+.screenshot-ui-capture-button:hover .screenshot-ui-capture-button-24px,
+.screenshot-ui-capture-button:focus .screenshot-ui-capture-button-24px {
+	background-color: rgba(138, 122, 92, 1);
+}
+.screenshot-ui-capture-button:cast .screenshot-ui-capture-button-24px {
+	background-color: #c01c28;/* capture button when Screencast */
+}
+.screenshot-ui-capture-button:cast:hover .screenshot-ui-capture-button-24px,
+.screenshot-ui-capture-button:cast:focus .screenshot-ui-capture-button-24px {
+	background-color: #d61f2d;
+}
+.screenshot-ui-capture-button:cast:active .screenshot-ui-capture-button-24px {
+	background-color: #a11722;
+}
+.screenshot-ui-shot-cast-container {/* screenshot / screencast buttons section */
+	background-color: rgba(240, 233, 220, 0.9);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.screenshot-ui-shot-cast-button {/* screenshot / screencast buttons */
+	background-color: transparent;
+	transition-duration: 100ms;
+}
+.screenshot-ui-shot-cast-button:hover,
+.screenshot-ui-shot-cast-button:focus,
+.screenshot-ui-shot-cast-button:active {
+	background-color: rgba(231, 222, 204, 0.95);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.screenshot-ui-shot-cast-button:checked {
+	background-color: rgba(153, 136, 102, 1);
+	color: rgba(251, 245, 234, 1);
+}
+.screenshot-ui-tooltip {/* tooltip for elements */
+	color: rgba(43, 31, 7, 0.87);
+	background-color: rgba(244, 238, 226, 0.8);
+	padding: 6px 12px;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 12px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+.window-close, /* close button (Overview - Workspaces - Selected window) */
+.screenshot-ui-close-button { /* close button (Screenshot UI) */
+	border-radius: 24px;
+	color: #ffeedf;
+	background-color: #885200;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+	transition-duration: 100ms;
+}
+.window-close:hover,
+.screenshot-ui-close-button:hover {
+	background-color: #e7decc;
+}
+
+
+
+
+/* Looking Glass | R.I.P. custom colors & light mode */
+#LookingGlassDialog {
+	border-radius: 14px;
+	margin: 5px;
+	background-color: #ff0000;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+#LookingGlassDialog .notebook-tab,
+#LookingGlassDialog > #Toolbar .lg-toolbar-button {
+	border-radius: 9px;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+#LookingGlassDialog > #Toolbar .lg-toolbar-button,
+#LookingGlassDialog .notebook-tab:selected {
+	background-color: #ffffff14;
+}
+#LookingGlassDialog > #Toolbar .lg-toolbar-button:hover {
+	background-color: #ffffff21;
+}
+.lg-dialog StEntry {
+	background-color: #30303099;
+	color: white;
+	border-color: #ffffff33;
+	min-height: 16px;
+	selection-background-color: #d7ba7f;
+	selected-color: #ffffff;
+}
+.lg-extension {
+	border-radius: 12px;
+}
+.lg-debug-flag-button .toggle-switch {
+	margin: 5px;
+	border-radius: 10px;
+	height: 26px;
+	padding: 0;
+}
+
+
+
+
+
+/* ___________________________________________________________________________________________________________O v e r v i e w */
+
+#overviewGroup, /* overview background */
+.workspace-animation {
+	background-color: #e0c1a3;
+}
+
+/* workspaces(background of desktop we cannot see) */
+.workspace-background {
+	border-radius: 30px;
+	background-color: #885200;
+	color: #ffeedf;
+	box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.15);
+}
+/* running app icon (in workspaces) */
+.icon-dropshadow { icon-shadow: 0 0 10px 0 #00000066; }
+.window-caption {/* selected window titles (in workspaces) */
+	spacing: 20px;
+	border-radius: 24px;
+	color: #885200;
+	background-color: #ffeedf;
+	border: 1px solid transparent;
+	padding: 4px 8px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+.workspace-thumbnails .placeholder {/* drag and drop indicator */
+	background-image: url("workspace-placeholder.svg");
+	background-size: contain;
+	width: 18px;
+}
+.workspace-thumbnail-indicator {/* selected indicator */
+	background-color: #f6e1b780;
+	border-color: #2b1f0761;
+	border-width: 1px;
+	border-radius: 3px;
+}
+.tile-preview {/* Tiled window previews */
+	background-color: #f6e1b780;
+	border: 1px solid #d7ba7f;
+}
+.switcher-list, /* alt + tab *//* workspace window switcher*/
+.resize-popup, /* i dunno what is that :( */
+.workspace-switcher, /* ctrl + alt + arr_left/arr_right  */
+.osd-window /* volume/brightness/.. switcher */ {
+	color: #885200;
+	background-color: #ffeedf;
+	border: 1px solid #885200;
+	border-radius: 60px;
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.07);
+}
+.switcher-list { /* alt + tab */
+	border-radius: 24px;
+}
+.switcher-list .item-box {/* ruuning apps in switcher list */
+	border-radius: 30px;
+	border: 1px solid #885200;
+	background-color: transparent;
+}
+.switcher-list .item-box:hover,
+.switcher-list .item-box:focus,
+.switcher-list .item-box:selected {
+	border-radius: 12px;
+	background-color: #e0c1a3;
+	box-shadow: inset 0 0 0 1px transparent;
+}
+.ws-switcher-indicator {/* workspace switcher*/
+	background-color: #885200;
+}
+
+
+/*_________________________________________________________________________________________________M o d a l - d i a l o g u e */
+
+/* pop up diaolgue for power off, wifi password entry etc*/
+.modal-dialog {
+	border-radius: 28px;
+	background-color: #e0c1a3;
+	border: 1px solid transparent;
+	box-shadow: inset 0 0 0 1px #0000000d;
+	color: #885200;
+}
+.modal-dialog-linked-button,/* button in modals */
+.notification-button,
+.hotplug-notification-item {
+	padding: 10px 0 !important;
+	border-radius: 24px !important;
+	background-color: #ffeedf;
+	color: #885200;
+	animation-duration: 100ms;
+}
+.modal-dialog-linked-button:hover,
+.modal-dialog-linked-button:focus,
+.notification-button:hover,
+.notification-button:focus,
+.modal-dialog-linked-button:last-child:hover,
+.modal-dialog-linked-button:last-child:focus {
+	background-color: #885200;
+	color: #ffeedf;
+}
+.modal-dialog-linked-button:last-child {
+	background-color: #ffeedf;
+	color: #885200;
+}
+.modal-dialog-linked-button:focus,
+.hotplug-notification-item:focus,
+.notification-button:focus {
+	animation-duration: 100ms;
+	box-shadow: inset 0 0 0 1px transparent !important;
+}
+.modal-dialog-linked-button:focus:hover,
+.hotplug-notification-item:focus:hover,
+.notification-button:focus:hover,
+.modal-dialog-linked-button:focus:active,
+.hotplug-notification-item:focus:active,
+.notification-button:focus:active {
+	box-shadow: inset 0 0 0 1px transparent !important;
+}
+.modal-dialog .modal-dialog-linked-button:insensitive,
+.hotplug-notification-item:insensitive,
+.notification-banner .notification-button:insensitive {
+	color: #2b1f0799;
+	background-color: #c2963d80;
+}
+/* if first button: margin-right: 12px/2 */
+.modal-dialog-linked-button:ltr:first-child,
+.notification-button:ltr:first-child,
+.hotplug-notification-item:ltr:first-child,
+.modal-dialog-linked-button:rtl:last-child,
+.notification-button:rtl:last-child,
+.hotplug-notification-item:rtl:last-child {
+	margin: 0 6px 12px 12px !important;
+}
+/* if last button: margin-left: 12px/2 */
+.modal-dialog-linked-button:ltr:last-child,
+.notification-button:ltr:last-child,
+.hotplug-notification-item:ltr:last-child,
+.modal-dialog-linked-button:rtl:first-child,
+.notification-button:rtl:first-child,
+.hotplug-notification-item:rtl:first-child {
+	margin: 0 12px 12px 6px !important;
+}
+/* if only button: normal margin */
+.modal-dialog-linked-button:first-child:last-child,
+.notification-button:first-child:last-child,
+.hotplug-notification-item:first-child:last-child {
+	margin: 0 12px 12px 12px !important;
+}
+/* else: margin-right/left: 12px/2 */
+.modal-dialog-linked-button,
+.notification-button,
+.hotplug-notification-item {
+	margin: 0 6px 12px 6px !important;
+}
+
+
+
+
+
+/*___________________________________________________________________________________________________________________e x t r a */
+
+/*___________________________________________________________________________________________________________________p a n e l*/
+
+/* panel in overview, lock screen */
+#panel:overview, #panel.unlock-screen, #panel.login-screen {
+	background-color: transparent;
+	transition-duration: 0.25s;
+}
+
+/*  indicator for active */
+#panel .screencast-indicator,
+#panel .remote-access-indicator,
+#panel .panel-button.screen-sharing-indicator { /* when sharing screen */
+	background: #cd9309;
+}
+
+#panel .panel-button.screen-sharing-indicator:hover {
+	background: #cd9309e6;
+}
+
+/* indicator when recording screen */
+#panel .panel-button.screen-recording-indicator {
+	background: #c01c28;
+}
+
+#panel .panel-button.screen-recording-indicator:hover {
+	background: #c01c28e6;
+}
+
+/* panel buttons in lock screen / overview */
+#panel.unlock-screen .panel-button,
+#panel.login-screen .panel-button,
+#panel:overview .panel-button {
+	color: #885200 !important;
+}
+
+
+/*_________________________________________________________________________________________________Q u i c k - s e t t i n g s*/
+
+/* quick slider section */
+/* fix margins in quick slider dection */
+.quick-slider .slider-bin {
+	padding: 2px 1px;
+	margin: 0;
+	color: #40ff00;
+}
+.quick-slider .slider-bin:focus {
+	background-color: #f0e9dce6;
+}
+.popup-menu-item:checked {
+	border-radius: 12px 12px 0 0;
+}
+.popup-separator-menu-item {/* 44 separator margin fix */
+	padding: 0 !important;
+}
+.popup-separator-menu-item .popup-separator-menu-item-separator {/* separator in popup menu */
+	height: 1px;
+	margin: 6px 0;
+	background-color: #0000001a;
+}
+.popup-separator-menu-item-separator:ltr { margin-right: 4.5px; }/* fix margins in separators */
+.popup-separator-menu-item-separator:rtl { margin-left: 4.5px; }
+
+.popup-sub-menu {/* fix margins in separators */
+	background-color: #f0e9dce6;
+	color: #2b1f07de;
+	box-shadow: inset 0 0 0 1px #0000000d;
+	border-radius: 0 0 12px 12px;
+	margin: 0 0 2px 0;
+}
+.popup-sub-menu .popup-menu-item {/* submenu items */
+	margin: 0;
+	color: #2b1f07de;
+	background-color: transparent;
+}
+.popup-sub-menu .popup-menu-item:last-child {/* make rounded borders for last element */
+	border-radius: 0 0 12px 12px;
+}
+.popup-sub-menu .popup-menu-item:hover,
+.popup-sub-menu .popup-menu-item:focus {
+	background-color: #e7deccf2 !important;
+}
+.popup-menu-item:insensitive {
+	color: #2b1f0761;
+	margin: 0;
+}
+/* all other graphical elements (sliders), OpenWeather Extension */
+.popup-inactive-menu-item {
+	color: #2b1f07de;
+	background-color: transparent;
+}
+.popup-inactive-menu-item:insensitive {
+	color: #2b1f0799 !important;
+}
+.button:focus {/* button unwanted settings*/
+	background-color: #46dc1c9d;
+	box-shadow: inset 0 0 0 2px #998866 !important;
+}
+.button:insensitive {
+	box-shadow: none;
+	color: #2b1f0799;
+}
+/*expanded -menu*/
+.device-subtitle {/* connect / disconnect text color (expanded menu) */
+	color: #3cff06;
+}
+/* background apps */
+/* make toggle transparent in QS */
+.background-apps-quick-toggle {
+	background-color: transparent;
+}
+.background-apps-quick-toggle:hover {
+	background-color: rgba(240, 233, 220, 0.9);
+}
+.background-apps-quick-toggle:focus {
+	background-color: rgba(240, 233, 220, 0.9);
+	box-shadow: inset 0 0 0 2px rgba(153, 136, 102, 1);
+}
+.background-app-item .title {/* background app name */
+	color: rgba(43, 31, 7, 0.87);
+	font-weight: 600;
+}
+.background-app-item .close-button {/* close button for background apps */
+	border-radius: 24px;
+	color: #ffeedf;
+	background-color: #885200;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.background-app-item .close-button:hover {
+	border-radius: 6px;
+}
+
+/*_________________________________________________________________________________________N o t i f i c a t i o n - p a n e l*/
+
+/*extra-messages*/
+/* remove right margin in message list section (datemenu) */
+.message-list-sections:ltr { margin-right: 0px; }
+.message-list-sections:rtl { margin-left: 0px; }
+/* fix margin for last button */
+.message-media-control:last-child:ltr { margin-right: 20px; }
+.message-media-control:last-child:rtl {	margin-left: 12px; }
+/* URLs in messages */
+.url-highlighter { link-color: rgba(153, 136, 102, 1); }
+/*Scroll bar */
+StScrollBar {
+	padding: 0;
+}
+StScrollView StScrollBar {
+	min-width: 8px;
+	min-height: 8px;
+}
+StScrollBar StBin#trough {
+	border-radius: 0;
+	background-color: transparent;
+}
+StScrollBar StButton#vhandle,
+StScrollBar StButton#hhandle {
+	border-radius: 8px;
+	background-color: rgba(194, 184, 163, 0.75);
+	border: 3px solid transparent;
+	transition-duration: 100ms;
+}
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#hhandle:hover {
+	background-color: rgba(194, 184, 163, 1);
+}
+StScrollBar StButton#vhandle:active,
+StScrollBar StButton#hhandle:active {
+	background-color: rgba(194, 184, 163, 0.87);
+}
+/* Date / Time menu  spacing area*/
+#calendarArea {
+	padding: 5px;
+}
+/* Calendar menu side column */
+.datemenu-calendar-column {
+	spacing: 5px;
+}
+.datemenu-calendar-column:ltr { padding-left: 6px; }
+.datemenu-calendar-column:rtl {	padding-right: 6px; }
+.datemenu-calendar-column .datemenu-displays-box {
+	spacing: 5px;
+}
+/*____________________________________________________________________________________________________________________d o c k*/
+
+#dashtodockContainer #dash .dash-background {/* if used Dash to Dock extension */
+	border-radius: 24px;
+	transition-duration: 250ms;/* imp for dock app hover lable*/
+}
+#dashtodockContainer.overview #dash .dash-background {/* when dock in overview */
+	box-shadow: inset 0 0 0 1.5px transparent;
+	background-color: transparent;
+}
+#dash .app-well-app:hover .app-well-app-running-dot {
+	width: 15px;
+}
+#dashtodockContainer .app-well-app.focused .app-well-app-running-dot {
+	width: 20px;
+}
+#dash .app-well-app-running-dot {/* pill when default dash (not dash to dock) */
+	margin-bottom: 6px;
+}
+.dash-item-container .app-well-app .overview-icon,/* deafult all backgrounds of elements in dash */
+.dash-item-container .show-apps .overview-icon {
+	border-radius: 24px;
+}
+
+/* ubuntu fix *
+#dashtodockContainer.bottom.extended #dash .dash-background,
+#dashtodockContainer.bottom.extended.dashtodock #dash .dash-background,
+#dashtodockContainer.bottom.extended.shrink #dash .dash-background,
+#dashtodockContainer.top.extended #dash .dash-background,
+#dashtodockContainer.top.extended.dashtodock #dash .dash-background,
+#dashtodockContainer.top.extended.shrink #dash .dash-background,
+#dashtodockContainer.left.extended #dash .dash-background,
+#dashtodockContainer.left.extended.dashtodock #dash .dash-background,
+#dashtodockContainer.left.extended.shrink #dash .dash-background,
+#dashtodockContainer.right.extended #dash .dash-background,
+#dashtodockContainer.right.extended.dashtodock #dash .dash-background,
+#dashtodockContainer.right.extended.shrink #dash .dash-background {
+	border-radius: 0;
+	background-color: rgba(250, 250, 250, 0.8);
+	box-shadow: none;
+	transition-duration: 250ms;
+}*/
+/* animation fix when extended dash *
+#dashtodockContainer.bottom.extended.overview #dash .dash-background,
+#dashtodockContainer.bottom.extended.overview.dashtodock #dash .dash-background,
+#dashtodockContainer.bottom.extended.overview.shrink #dash .dash-background,
+#dashtodockContainer.top.extended.overview #dash .dash-background,
+#dashtodockContainer.top.extended.overview.dashtodock #dash .dash-background,
+#dashtodockContainer.top.extended.overview.shrink #dash .dash-background,
+#dashtodockContainer.left.extended.overview #dash .dash-background,
+#dashtodockContainer.left.extended.overview.dashtodock #dash .dash-background,
+#dashtodockContainer.left.extended.overview.shrink #dash .dash-background,
+#dashtodockContainer.right.extended.overview #dash .dash-background,
+#dashtodockContainer.right.extended.overview.dashtodock #dash .dash-background,
+#dashtodockContainer.right.extended.overview.shrink #dash .dash-background {
+	background-color: rgba(248, 248, 248, 0.92);
+}
+
+
+/*___________________________________________________________________________________________________________d a s h b o a r d */
+
+/*__________________________________________________________________________________________________________________s e a r c h*/
+
+/*_____________________________________________________________________________________________________s c r e e n s h o t u i */
+
+/* ____________________________________________________________________________________________________________O v e r v i e w */
+
+/*_________________________________________________________________________________________________M o d a l - d i a l o g u e */
+
+/*_________________________________________________________________________________________________________________o t h e r s */
+
+/* user avatar */
+.user-icon.user-avatar {
+	background-color: #ff00f2;
+	color: #885200;
+	box-shadow: 0 0 20px 0 #00000040;
+}
+/* password entry */
+.prompt-dialog-password-entry {
+	color: #e0c1a3;
+	background-color: #885200;
+}
+.unlock-dialog StEntry {/* Entry in lock screen */
+	border: none !important;
+}
+.unlock-dialog StEntry:focus {
+	box-shadow: inset 0 0 0 1px rgba(43, 31, 7, 0.38);
+}
+
+/* Check Boxes */
+.check-box StBoxLayout {
+	spacing: .8em;
+}
+.check-box StBin {
+	width: 24px;
+	height: 24px;
+	background-image: url("checkbox-off.svg");
+}
+.check-box:focus StBin {
+	background-image: url("checkbox-off-focused.svg");
+}
+.check-box:checked StBin {
+	background-image: url("checkbox.svg");
+}
+.check-box:focus:checked StBin {
+	background-image: url("checkbox-focused.svg");
+}
