@@ -1,5 +1,6 @@
 # srinivasa-gnome-shell
 gnome shell inspired from https://github.com/imarkoff/Marble-shell-theme
+design and color inspired fromm google material design
 
 # output
 desktop
